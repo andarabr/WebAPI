@@ -21,7 +21,7 @@ namespace DataAccess.Models
             this.Name = provinceVM.Name;
             this.UpdateDate = DateTime.Now.ToLocalTime();
         }
-
+        //comment ajah
         public void Delete()
         {
             this.IsDeleted = true;
