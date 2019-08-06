@@ -1,11 +1,9 @@
 c:\Users\breygas andara\documents\visual studio 2015\Projects\API\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
-C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\bin\Debug\Core.exe.config
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\bin\Debug\Core.exe
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\bin\Debug\Core.pdb
-C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\bin\Debug\EntityFramework.dll
-C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\bin\Debug\EntityFramework.xml
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\obj\Debug\Core.exe
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Core\obj\Debug\Core.pdb

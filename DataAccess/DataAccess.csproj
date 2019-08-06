@@ -52,16 +52,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\ApplicationContext.cs" />
+    <Compile Include="Migrations\201908060626347_addmigration_alltablesfirst.cs" />
+    <Compile Include="Migrations\201908060626347_addmigration_alltablesfirst.Designer.cs">
+      <DependentUpon>201908060626347_addmigration_alltablesfirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\District.cs" />
     <Compile Include="Models\Division.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeRole.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\LoginApplication.cs" />
+    <Compile Include="Models\Parameter.cs" />
     <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\Regency.cs" />
+    <Compile Include="Models\Religion.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Village.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ApplicationVM.cs" />
+    <Compile Include="ViewModels\ContractVM.cs" />
     <Compile Include="ViewModels\DepartmentVM.cs" />
+    <Compile Include="ViewModels\DistrictVM.cs" />
     <Compile Include="ViewModels\DivisionVM.cs" />
+    <Compile Include="ViewModels\EmployeeRoleVM.cs" />
+    <Compile Include="ViewModels\EmployeeVM.cs" />
+    <Compile Include="ViewModels\LoginApplicationVM.cs" />
+    <Compile Include="ViewModels\LoginVM.cs" />
+    <Compile Include="ViewModels\ParameterVM.cs" />
     <Compile Include="ViewModels\ProvinceVM.cs" />
+    <Compile Include="ViewModels\RegencyVM.cs" />
+    <Compile Include="ViewModels\ReligionVM.cs" />
     <Compile Include="ViewModels\RoleVM.cs" />
+    <Compile Include="ViewModels\VillageVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -72,6 +100,11 @@
       <Project>{c81f3150-9de9-4f54-bba3-f8141f55ffd7}</Project>
       <Name>Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908060626347_addmigration_alltablesfirst.resx">
+      <DependentUpon>201908060626347_addmigration_alltablesfirst.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

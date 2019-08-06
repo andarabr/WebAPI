@@ -1,0 +1,2 @@
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Debug\Common.exe.config
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
