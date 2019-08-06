@@ -1,0 +1,13 @@
+c:\Users\breygas andara\documents\visual studio 2015\Projects\API\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\Core.exe
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\Core.pdb
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\obj\Debug\DataAccess.pdb
