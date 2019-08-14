@@ -29,13 +29,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Religion> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Religion.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDeleted == false).ToList();
-            return get;
-        }
-
         public Religion Get(int id)
         {
             var get = applicationContext.Religion.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);

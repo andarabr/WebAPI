@@ -8,7 +8,6 @@ namespace Common.Repositories.Interfaces
     {
         List<Role> Get();
         Role Get(int id);
-        List<Role> Get(string value);
         bool Insert(RoleVM roleVM);
         bool Update(int id, RoleVM roleVM);
         bool Delete(int id);

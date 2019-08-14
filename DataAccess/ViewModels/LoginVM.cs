@@ -1,25 +1,20 @@
-﻿namespace DataAccess.ViewModels
+﻿using System;
+
+namespace DataAccess.ViewModels
 {
     public class LoginVM
     {
-        public int Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-
+        public int ApplicationId { get; set; }
 
         public LoginVM() { }
 
-        public LoginVM(int id, string email, string password)
+        public LoginVM(string email, string password, int applicationid)
         {
-            this.Id = id;
             this.Email = email;
             this.Password = password;
-        }
-
-        public void Update(string name, string value)
-        {
-            this.Email = name;
-            this.Password = value;
+            this.ApplicationId = applicationid;
         }
     }
 }

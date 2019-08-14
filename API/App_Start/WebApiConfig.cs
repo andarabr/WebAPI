@@ -25,6 +25,11 @@ namespace API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "Login",
+                routeTemplate: "api/{controller}/{action}/{username}/{password}/{application}"
+            );
         }
     }
 }

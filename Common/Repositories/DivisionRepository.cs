@@ -29,13 +29,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Division> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Division.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDeleted == false).ToList();
-            return get;
-        }
-
         public Division Get(int id)
         {
             var get = applicationContext.Division.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);

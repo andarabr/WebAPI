@@ -22,7 +22,7 @@ namespace DataAccess.Context
         public DbSet<District> District { get; set; }
         public DbSet<Village> Village { get; set; }
         public DbSet<Employee> Employee { get; set; }
-        public DbSet<LoginApplication> LoginApplication { get; set; }
+        //public DbSet<LoginApplication> LoginApplication { get; set; }
         public DbSet<Models.Contract> Contract { get; set; }
         public DbSet<EmployeeRole> EmployeeRole { get; set; }
     }

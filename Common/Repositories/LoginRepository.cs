@@ -29,13 +29,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Login> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Login.Where(x => (x.Email.Contains(value) || Convert.ToString(x.Id).Contains(value) || x.Password.ToString().Contains(value)) && x.IsDeleted == false).ToList();
-            return get;
-        }
-
         public Login Get(int id)
         {
             var get = applicationContext.Login.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
@@ -57,6 +50,27 @@ namespace Common.Repositories
             applicationContext.Entry(get).State = EntityState.Modified;
             var result = applicationContext.SaveChanges();
             return result > 0;
+        }
+
+        public Login GetUserByLogin(string email, string password, int application)
+        {
+            //var get = applicationContext.Login.Include("ListApplications")
+            //    .SingleOrDefault(x => x.IsDeleted == false && x.Email == email && x.Password == password &&
+            //                x.ListApplications.Any(y => y.Id == application));
+            var get = applicationContext
+                .Login.Include("Employee")
+                .Include("Employee.Village")
+                .Include("Employee.Village.District")
+                .Include("Employee.Village.District.Regency")
+                .Include("Employee.Village.District.Regency.Province")
+                .Include("Employee.Department")
+                .Include("Employee.Department.Division")
+                .Include("Employee.Manager")
+                .Include("Employee.Religion")
+                .Include("Employee.Role")
+                .Include("ListApplications")
+                .SingleOrDefault(x => x.IsDeleted == false && x.Email == email && x.Password == password && x.ListApplications.Any(y => y.Id == application));
+            return get;
         }
     }
 }

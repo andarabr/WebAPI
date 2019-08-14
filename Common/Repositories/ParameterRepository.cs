@@ -28,13 +28,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Parameter> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Parameter.Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value)) && x.IsDeleted == false).ToList();
-            return get;
-        }
-
         public Parameter Get(int id)
         {
             var get = applicationContext.Parameter.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);

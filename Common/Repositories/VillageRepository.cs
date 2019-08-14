@@ -24,20 +24,13 @@ namespace Common.Repositories
 
         public List<Village> Get()
         {
-            var get = applicationContext.Village.Include("District").Where(x => x.IsDeleted == false).ToList();
-            return get;
-        }
-
-        public List<Village> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Village.Include("District").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.District.Name.Contains(value)) && x.IsDeleted == false).ToList();
+            var get = applicationContext.Village.Include("District").Include("District.Regency").Include("District.Regency.Province").Where(x => x.IsDeleted == false).ToList();
             return get;
         }
 
         public Village Get(int id)
         {
-            var get = applicationContext.Village.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
+            var get = applicationContext.Village.Include("District").Include("District.Regency").Include("District.Regency.Province").SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
             return get;
         }
 
@@ -55,6 +48,8 @@ namespace Common.Repositories
         public bool Update(int id, VillageVM villageVM)
         {
             var get = Get(id);
+            var getDistrict = applicationContext.District.SingleOrDefault(x => x.IsDeleted == false && x.Id == villageVM.DistrictId);
+            get.District = getDistrict;
             get.Update(villageVM);
             applicationContext.Entry(get).State = EntityState.Modified;
             var result = applicationContext.SaveChanges();

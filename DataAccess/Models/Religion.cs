@@ -5,7 +5,7 @@ using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Religion")]
+    [Table("TB_M_Religions")]
     public class Religion : BaseModel
     {
         public Religion() { }

@@ -5,7 +5,7 @@ using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Parameter")]
+    [Table("TB_M_Parameters")]
     public class Parameter : BaseModel
     {
         public Parameter() { }

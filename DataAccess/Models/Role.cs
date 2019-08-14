@@ -9,7 +9,7 @@ using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Role")]
+    [Table("TB_M_Roles")]
     public class Role : BaseModel
     {
         public Role() { }

@@ -24,20 +24,13 @@ namespace Common.Repositories
 
         public List<District> Get()
         {
-            var get = applicationContext.District.Include("Regency").Where(x => x.IsDeleted == false).ToList();
-            return get;
-        }
-
-        public List<District> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.District.Include("Regency").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Regency.Name.Contains(value)) && x.IsDeleted == false).ToList();
+            var get = applicationContext.District.Include("Regency").Include("Regency.Province").Where(x => x.IsDeleted == false).ToList();
             return get;
         }
 
         public District Get(int id)
         {
-            var get = applicationContext.District.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
+            var get = applicationContext.District.Include("Regency").Include("Regency.Province").SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
             return get;
         }
 

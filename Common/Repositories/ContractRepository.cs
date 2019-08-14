@@ -34,13 +34,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Contract> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Contract.Include("Employee").Where(x => (x.JoinDate.ToString().Contains(value) || x.EndDate.ToString().Contains(value) || x.Id.ToString().Contains(value) || x.Employee.Id.ToString().Contains(value)) && x.IsDeleted == false).ToList();
-            return get;
-        }
-
         public Contract Get(int id)
         {
             var get = applicationContext.Contract.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);

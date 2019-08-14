@@ -27,13 +27,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<LoginApplication> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.LoginApplication.Include("Login").Include("Application").ToList();
-            return get;
-        }
-
         public LoginApplication Get(int id)
         {
             var get = applicationContext.LoginApplication.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);

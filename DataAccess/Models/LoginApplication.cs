@@ -5,7 +5,7 @@ using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
-    [Table("TB_T_LoginApplication")]
+    [Table("TB_T_LoginApplications")]
     public class LoginApplication : BaseModel
     {
         public LoginApplication() { }

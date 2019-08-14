@@ -5,7 +5,7 @@ using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_District")]
+    [Table("TB_M_Districts")]
     public class District : BaseModel
     {
         public District() { }

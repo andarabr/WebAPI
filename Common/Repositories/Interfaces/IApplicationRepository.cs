@@ -8,7 +8,6 @@ namespace Common.Repositories.Interfaces
     {
         List<Application> Get();
         Application Get(int id);
-        List<Application> Get(string value);
         bool Insert(ApplicationVM applicationVM);
         bool Update(int id, ApplicationVM applicationVM);
         bool Delete(int id);

@@ -9,7 +9,7 @@ using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Division")]
+    [Table("TB_M_Divisions")]
     public class Division : BaseModel
     {
         public Division() { }

@@ -36,13 +36,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Role> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Role.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDeleted == false).ToList();
-            return get;
-        }
-
         public Role Get(int id)
         {
             var get = applicationContext.Role.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
@@ -60,17 +53,10 @@ namespace Common.Repositories
         public bool Update(int id, RoleVM roleVM)
         {
             var get = Get(id);
-            if (get != null)
-            {
-                get.Update(roleVM);
-                applicationContext.Entry(get).State = EntityState.Modified;
-                var result = applicationContext.SaveChanges();
-                return result > 0;
-            }
-            else
-            {
-                return false;
-            }
-        }
+            get.Update(roleVM);
+            applicationContext.Entry(get).State = EntityState.Modified;
+            var result = applicationContext.SaveChanges();
+            return result > 0;
+    }
     }
 }

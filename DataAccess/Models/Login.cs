@@ -1,14 +1,24 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Core.Base;
 using DataAccess.ViewModels;
+using Newtonsoft.Json;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Login")]
-    public class Login : BaseModel
+    [Table("TB_M_Logins")]
+    public class Login
     {
         public Login() { }
+        [ForeignKey("Employee")]
+        public int Id { get; set; }
+        public DateTimeOffset CreateDate { get; set; }
+        public DateTimeOffset UpdateDate { get; set; }
+        public DateTimeOffset DeleteDate { get; set; }
+        public bool IsDeleted { get; set; }
+        public virtual Employee Employee { get; set; }
 
         public Login(LoginVM loginVM)
         {
@@ -32,5 +42,7 @@ namespace DataAccess.Models
 
         public string Email { get; set; }
         public string Password { get; set; }
+
+        public ICollection<Application> ListApplications { get; set; }
     }
 }

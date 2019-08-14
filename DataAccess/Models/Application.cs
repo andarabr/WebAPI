@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Core.Base;
 using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Application")]
+    [Table("TB_M_Applications")]
     public class Application : BaseModel
     {
         public Application() { }
@@ -29,5 +30,6 @@ namespace DataAccess.Models
         }
 
         public string Name { get; set; }
+        public ICollection<Login> ListLogins { get; set; }
     }
 }

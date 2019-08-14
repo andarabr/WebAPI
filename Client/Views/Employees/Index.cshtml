@@ -1,0 +1,119 @@
+﻿<div class="container-fluid">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">Create New</button><br /><br />
+    <table class="cell-border compact hover display" id="table">
+        <thead>
+            <tr>
+                <th>
+                    No.
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    User Email
+                </th>
+                <th>
+                    Phone Number
+                </th>
+                <th>
+                    Child
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    Bank Account
+                </th>
+                <th>
+                    Salary
+                </th>
+                <th>
+                    Marital Status
+                </th>
+                <th>
+                    Manager
+                </th>
+                <th>
+                    Religion
+                </th>
+                <th>
+                    Role
+                </th>
+                <th>
+                    Department
+                </th>
+                <th>
+                    Village
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">District Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder="Name" />
+                    </div>   
+                    <div class="form-group">
+                        <label for="Name">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Regency">Department</label>
+                        <select id="DepartmentName" class="pc form-control">
+                            <option>Select Province</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Regency">Role</label>
+                        <select id="RoleName" class="pc form-control">
+                            <option>Select Province</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="Validate();">Add</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Validate();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Content/sweetalert/sweetalert.min.js"></script>
+    <link href="~/Content/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+
+    <script src="~/Scripts/EmployeesMaster/RetrievingEmployees.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jqueryval")
+}

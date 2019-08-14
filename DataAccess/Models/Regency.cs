@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using Core.Base;
 using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
+    [Table("TB_M_Regencies")]
     public class Regency : BaseModel
     {
         public Regency() { }
