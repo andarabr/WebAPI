@@ -1,3 +1,14 @@
 ﻿button, input, select, .modal-content {
     border-radius: 0px !important;
 }
+
+Textarea {
+    border-radius: 0px !important;
+    height: 100px !important;
+}
+
+div.dataTables_scrollBody table thead .sorting:before,
+div.dataTables_scrollBody table thead .sorting_asc:before,
+div.dataTables_scrollBody table thead .sorting_desc:before {
+display: none !important;
+}

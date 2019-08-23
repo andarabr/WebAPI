@@ -29,36 +29,37 @@ namespace API.Controllers
         //    return message;
         //}
 
-        //public HttpResponseMessage Get(int id)
-        //{
-        //    var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Data Not Found");
-        //    var get = _iLoginService.Get(id);
-        //    if (get != null)
-        //    {
-        //        message = Request.CreateResponse(HttpStatusCode.OK, get);
-        //        return message;
-        //    }
-        //    return message;
-        //}
+        public HttpResponseMessage Get(int id)
+        {
+            var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Data Not Found");
+            var get = _iLoginService.Get(id);
+            if (get != null)
+            {
+                message = Request.CreateResponse(HttpStatusCode.OK, get);
+                return message;
+            }
+            return message;
+        }
 
-        //public HttpResponseMessage Update(int id, LoginVM loginVM)
-        //{
-        //    var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");
-        //    if (string.IsNullOrWhiteSpace(id.ToString()))
-        //    {
-        //        message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Invalid Id");
-        //    }
-        //    else
-        //    {
-        //        var get = _iLoginService.Update(id, loginVM);
-        //        if (get)
-        //        {
-        //            message = Request.CreateResponse(HttpStatusCode.OK, get);
-        //            return message;
-        //        }
-        //    }
-        //    return message;
-        //}
+        [HttpPut]
+        public HttpResponseMessage Update(int id, LoginVM loginVM)
+        {
+            var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");
+            if (string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Invalid Id");
+            }
+            else
+            {
+                var get = _iLoginService.Update(id, loginVM);
+                if (get)
+                {
+                    message = Request.CreateResponse(HttpStatusCode.OK, get);
+                    return message;
+                }
+            }
+            return message;
+        }
 
         //public HttpResponseMessage Insert(LoginVM loginVM)
         //{

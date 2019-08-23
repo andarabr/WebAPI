@@ -36,7 +36,7 @@ namespace Common.Repositories
 
         public Contract Get(int id)
         {
-            var get = applicationContext.Contract.SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
+            var get = applicationContext.Contract.Include("Employee").SingleOrDefault(x => x.IsDeleted == false && x.Id == id);
             return get;
         }
 

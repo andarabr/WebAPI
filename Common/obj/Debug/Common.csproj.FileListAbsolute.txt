@@ -20,3 +20,5 @@ C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Debug\System.We
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\obj\Debug\Common.exe
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\obj\Debug\Common.pdb
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Debug\Core.exe.config
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Debug\DataAccess.exe.config

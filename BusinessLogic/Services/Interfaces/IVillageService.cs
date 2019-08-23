@@ -8,6 +8,7 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Village> Get();
         Village Get(int id);
+        Village GetByDistrict(int id);
         bool Insert(VillageVM villageVM);
         bool Update(int id, VillageVM villageVM);
         bool Delete(int id);

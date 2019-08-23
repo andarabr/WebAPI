@@ -38,7 +38,9 @@ namespace Client.Controllers
                 employee = Enumerable.Empty<Employee>();
                 ModelState.AddModelError(string.Empty, "Server error try after some time.");
             }
-            return Json(employee, JsonRequestBehavior.AllowGet);
+            var jsonResult = Json(employee, JsonRequestBehavior.AllowGet);
+            jsonResult.MaxJsonLength = int.MaxValue;
+            return jsonResult;
         }
 
         public void InsertOrUpdate(EmployeeVM employeeVM)

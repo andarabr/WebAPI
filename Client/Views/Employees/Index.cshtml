@@ -1,17 +1,18 @@
-﻿<div class="container-fluid">
-    <hr />
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">Create New</button><br /><br />
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdministrator.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Employee Data</h3><hr />
+    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">Create New</button><br /><br />
     <table class="cell-border compact hover display" id="table">
         <thead>
             <tr>
                 <th>
                     No.
                 </th>
-                <th>
-                    First Name
-                </th>
-                <th>
-                    Last Name
+                <th width="50px">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Full Name &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                 </th>
                 <th>
                     User Email
@@ -65,7 +66,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
-                <h4 class="modal-title" id="myModalLabel">District Form</h4>
+                <h4 class="modal-title" id="myModalLabel">Employee Form</h4>
             </div>
             <div class="modal-body">
                 <form>
@@ -75,22 +76,96 @@
                     </div>
                     <div class="form-group">
                         <label for="Name">First Name</label>
-                        <input type="text" class="form-control" id="FirstName" placeholder="Name" />
+                        <input type="text" class="form-control" id="FirstName" placeholder="First Name" />
                     </div>   
                     <div class="form-group">
                         <label for="Name">Last Name</label>
-                        <input type="text" class="form-control" id="LastName" placeholder="Name" />
+                        <input type="text" class="form-control" id="LastName" placeholder="Last Name" />
                     </div>
                     <div class="form-group">
-                        <label for="Regency">Department</label>
+                        <label for="Name">User Email</label>
+                        <input type="text" class="form-control" id="UserEmail" placeholder="User Email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Phone Number</label>
+                        <input type="number" class="form-control" id="PhoneNumber" placeholder="Phone Number" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Children</label>
+                        <input type="number" class="form-control" min="0" max="50" id="NumOfChildren" placeholder="Children" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Gender</label>
+                        <fieldset id="group1">
+                            <input type="radio" id="MaleRadio" value="False" name="group1"><label for="Department">Male</label>
+                            <input type="radio" id="FemaleRadio" value="True" name="group1"><label for="Department">Female</label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Address</label>
+                        <Textarea type="text" class="form-control" id="Address" placeholder="Address" ></Textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Bank Account</label>
+                        <input type="text" class="form-control" id="BankAccount" placeholder="Bank Account" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Salary</label>
+                        <input type="number" min="1" max="99999999999999999999" class="form-control" id="Salary" placeholder="Salary" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Marital Status</label>
+                        <fieldset id="group2">
+                            <input type="radio" id="SingleRadio" value="False" name="group2"><label for="Department">Single</label>
+                            <input type="radio" id="MarriedRadio" value="True" name="group2"><label for="Department">Married</label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label for="Department">Manager</label>
+                        <select id="ManagerName" class="pc form-control">
+                            <option>Select Manager</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Department">Department</label>
                         <select id="DepartmentName" class="pc form-control">
+                            <option>Select Department</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Role">Role</label>
+                        <select id="RoleName" class="pc form-control">
+                            <option>Select Role</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Village">Province</label>
+                        <select id="ProvinceName" class="pc form-control">
                             <option>Select Province</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="Regency">Role</label>
-                        <select id="RoleName" class="pc form-control">
-                            <option>Select Province</option>
+                        <label for="Village">Regency</label>
+                        <select id="RegencyName" class="pc form-control">
+                            <option>Select Regency</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Village">District</label>
+                        <select id="DistrictName" class="pc form-control">
+                            <option>Select District</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Village">Village</label>
+                        <select id="VillageName" class="pc form-control">
+                            <option>Select Village</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Religion">Religion</label>
+                        <select id="ReligionName" class="pc form-control">
+                            <option>Select Religion</option>
                         </select>
                     </div>
                 </form>
@@ -104,16 +179,53 @@
     </div>
 </div>
 
+<div class="modal fade" id="myModallogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Employee Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div style="display: none;" class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="IdLogin" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Id">Email</label>
+                        <input type="text" class="form-control" id="WorkEmail" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Password</label><span class="pull-right"><a style="font-size: 11px" id="togglepass" onclick="TogglePassword()" href="#"><u>Click to show password</u></a></span>
+                        <input type="password" class="form-control" id="Password" disabled="disabled" placeholder="password" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Village">Login Application</label>
+                        <select id="LoginApplication" class="pc form-control">
+                            <option>Select District</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="ValidateLogin();">Add</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="ValidateLogin();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @section Scripts {
     <script src="~/Content/sweetalert/sweetalert.min.js"></script>
     <link href="~/Content/sweetalert/sweetalert.css" rel="stylesheet" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
- 
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
-
+    <script src="~/Scripts/datatables.min.js"></script>
     <script src="~/Scripts/EmployeesMaster/RetrievingEmployees.js"></script>
     <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     @Scripts.Render("~/bundles/jqueryval")
 }

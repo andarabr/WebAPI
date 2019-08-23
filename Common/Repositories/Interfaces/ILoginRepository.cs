@@ -9,8 +9,8 @@ namespace Common.Repositories.Interfaces
         List<Login> Get();
         Login Get(int id);
         Login GetUserByLogin(string email, string password, int application);
-        bool Insert(LoginVM parameterVM);
-        bool Update(int id, LoginVM parameterVM);
+        bool Insert(LoginVM loginVM);
+        bool Update(int id, LoginVM loginVM);
         bool Delete(int id);
     }
 }

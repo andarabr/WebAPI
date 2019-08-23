@@ -41,6 +41,7 @@ namespace API.Controllers
             return message;
         }
 
+        [HttpPut]
         public HttpResponseMessage Update(int id, ContractVM contractVM)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");

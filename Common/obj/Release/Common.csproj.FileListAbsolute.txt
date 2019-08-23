@@ -1,4 +1,3 @@
-C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\Newtonsoft.Json.dll
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\Common.exe.config
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\Common.exe
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\Common.pdb
@@ -6,6 +5,7 @@ C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\Core.ex
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\DataAccess.exe
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\EntityFramework.dll
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\Newtonsoft.Json.dll
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\System.Net.Http.Formatting.dll
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\System.Web.Http.dll
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\Common\bin\Release\System.Web.Http.WebHost.dll

@@ -36,6 +36,19 @@ namespace BusinessLogic.Services
             }
         }
 
+        public Village GetByDistrict(int id)
+        {
+            if (string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                return null;
+            }
+            else
+            {
+                var result = _villageRepository.GetByDistrict(id);
+                return result;
+            }
+        }
+
         public bool Insert(VillageVM villageVM)
         {
             if (string.IsNullOrWhiteSpace(villageVM.Name))

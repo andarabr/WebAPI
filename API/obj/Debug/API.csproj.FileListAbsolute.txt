@@ -31,3 +31,7 @@ C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\bin\Unity.Container.pd
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\obj\Debug\API.csprojResolveAssemblyReference.cache
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\obj\Debug\API.dll
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\obj\Debug\API.pdb
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\bin\BusinessLogic.exe.config
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\bin\Common.exe.config
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\bin\Core.exe.config
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\API\bin\DataAccess.exe.config

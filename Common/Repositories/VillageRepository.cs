@@ -34,6 +34,12 @@ namespace Common.Repositories
             return get;
         }
 
+        public Village GetByDistrict(int id)
+        {
+            var get = applicationContext.Village.Include("District").Include("District.Regency").Include("District.Regency.Province").SingleOrDefault(x => x.IsDeleted == false && x.District.Id == id);
+            return get;
+        }
+
         public bool Insert(VillageVM villageVM)
         {
             var push = new Village(villageVM);

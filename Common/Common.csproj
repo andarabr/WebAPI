@@ -41,10 +41,26 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,13 +77,14 @@
     <Compile Include="Repositories\DistrictRepository.cs" />
     <Compile Include="Repositories\DivisionRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\EmployeeRoleRepository.cs" />
     <Compile Include="Repositories\Interfaces\IApplicationRepository.cs" />
     <Compile Include="Repositories\Interfaces\IContractRepository.cs" />
     <Compile Include="Repositories\Interfaces\IDepartmentRepository.cs" />
     <Compile Include="Repositories\Interfaces\IDistrictRepository.cs" />
     <Compile Include="Repositories\Interfaces\IDivisionRepository.cs" />
     <Compile Include="Repositories\Interfaces\IEmployeeRepository.cs" />
-    <Compile Include="Repositories\Interfaces\ILoginApplicationRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IEmployeeRoleRepository.cs" />
     <Compile Include="Repositories\Interfaces\ILoginRepository.cs" />
     <Compile Include="Repositories\Interfaces\IParameterRepository.cs" />
     <Compile Include="Repositories\Interfaces\IProvinceRepository.cs" />
@@ -85,14 +102,12 @@
     <Compile Include="Repositories\VillageRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\API\API.csproj">
-      <Project>{0a326b24-2570-41f8-821c-f56b76e46147}</Project>
-      <Name>API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{c81f3150-9de9-4f54-bba3-f8141f55ffd7}</Project>
       <Name>Core</Name>

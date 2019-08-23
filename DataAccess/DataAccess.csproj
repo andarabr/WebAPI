@@ -41,9 +41,25 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,9 +69,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\ApplicationContext.cs" />
-    <Compile Include="Migrations\201908060626347_addmigration_alltablesfirst.cs" />
-    <Compile Include="Migrations\201908060626347_addmigration_alltablesfirst.Designer.cs">
-      <DependentUpon>201908060626347_addmigration_alltablesfirst.cs</DependentUpon>
+    <Compile Include="Migrations\201908090621266_migratetonewdatabase.cs" />
+    <Compile Include="Migrations\201908090621266_migratetonewdatabase.Designer.cs">
+      <DependentUpon>201908090621266_migratetonewdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908090649128_addingtransactionlogin.cs" />
+    <Compile Include="Migrations\201908090649128_addingtransactionlogin.Designer.cs">
+      <DependentUpon>201908090649128_addingtransactionlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908090650022_addingtransactionloginv2.cs" />
+    <Compile Include="Migrations\201908090650022_addingtransactionloginv2.Designer.cs">
+      <DependentUpon>201908090650022_addingtransactionloginv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908091003394_addingonetoonerelation.cs" />
+    <Compile Include="Migrations\201908091003394_addingonetoonerelation.Designer.cs">
+      <DependentUpon>201908091003394_addingonetoonerelation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Application.cs" />
@@ -66,7 +94,6 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeRole.cs" />
     <Compile Include="Models\Login.cs" />
-    <Compile Include="Models\LoginApplication.cs" />
     <Compile Include="Models\Parameter.cs" />
     <Compile Include="Models\Province.cs" />
     <Compile Include="Models\Regency.cs" />
@@ -92,7 +119,9 @@
     <Compile Include="ViewModels\VillageVM.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,8 +131,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908060626347_addmigration_alltablesfirst.resx">
-      <DependentUpon>201908060626347_addmigration_alltablesfirst.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908090621266_migratetonewdatabase.resx">
+      <DependentUpon>201908090621266_migratetonewdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908090649128_addingtransactionlogin.resx">
+      <DependentUpon>201908090649128_addingtransactionlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908090650022_addingtransactionloginv2.resx">
+      <DependentUpon>201908090650022_addingtransactionloginv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908091003394_addingonetoonerelation.resx">
+      <DependentUpon>201908091003394_addingonetoonerelation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

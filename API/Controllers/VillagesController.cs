@@ -41,6 +41,18 @@ namespace API.Controllers
             return message;
         }
 
+        public HttpResponseMessage GetByDistrict(int id)
+        {
+            var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Data Not Found");
+            var get = _iVillageService.GetByDistrict(id);
+            if (get != null)
+            {
+                message = Request.CreateResponse(HttpStatusCode.OK, get);
+                return message;
+            }
+            return message;
+        }
+
 
         [HttpPut]
         public HttpResponseMessage Update(int id, VillageVM villageVM)

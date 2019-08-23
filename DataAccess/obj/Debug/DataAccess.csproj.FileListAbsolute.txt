@@ -24,3 +24,4 @@ C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\obj\Debug\DataA
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Breygas Andara\Documents\MII Project\Git\API\DataAccess\bin\Debug\Core.exe.config

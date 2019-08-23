@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdministrator.cshtml";
+}
+
+<div class="container-fluid">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">Create New</button><br /><br />
+    <table class="cell-border compact hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    No.
+                </th>
+                <th>
+                    Employee Name
+                </th>
+                <th>
+                    Join Date
+                </th>
+                <th>
+                    End Date
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Contract Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Regency">Employee</label>
+                        <select id="Employee" class="pc form-control">
+                            <option>Select Employee</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Join Date</label>
+                        <input type="date" class="form-control datepicker" id="JoinDate" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">End Date</label>
+                        <input type="date" class="form-control datepicker"  id="EndDate" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Status</label>
+                        <fieldset id="group2">
+                            <input type="radio" id="TemporaryRadio" value="Temporary" name="group2"><label for="Department">Temporary</label>
+                            <br />
+                            <input type="radio" id="PermanentRadio" value="Permanent" name="group2"><label for="Department">Permanent</label>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="Validate();">Add</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Validate();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Content/sweetalert/sweetalert.min.js"></script>
+    <link href="~/Content/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Content/datatables/jquery.dataTables.min.js"></script>
+    <link href="~/Content/datatables/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/ContractsTransaction/RetrievingContracts.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jqueryval")
+}

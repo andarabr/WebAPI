@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using BootcampManagement.Client.ViewModels;
 using Newtonsoft.Json;
+using DataAccess.Models;
 
 namespace Client.Controllers
 {
@@ -60,7 +61,7 @@ namespace Client.Controllers
 
         public JsonResult GetById(int id)
         {
-            LoginVM loginVM = null;
+            Login login = null;
             var client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:52777/api/");
             var responseTask = client.GetAsync("Logins/" + id);
@@ -68,15 +69,15 @@ namespace Client.Controllers
             var result = responseTask.Result;
             if (result.IsSuccessStatusCode)
             {
-                var readTask = result.Content.ReadAsAsync<LoginVM>();
+                var readTask = result.Content.ReadAsAsync<Login>();
                 readTask.Wait();
-                loginVM = readTask.Result;
+                login = readTask.Result;
             }
             else
             {
                 // try to find something
             }
-            return Json(loginVM, JsonRequestBehavior.AllowGet);
+            return Json(login, JsonRequestBehavior.AllowGet);
         }
 
         public void Delete(int id)
